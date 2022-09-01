@@ -28,6 +28,11 @@ fun String.upperFirstAndLast(): String {
 //    return ("$label ${operant1 * operant2}")
 //}
 
+// inline fun xyz()
+// inline function: function body will be directly generated into the byte code
+// wherever the function is called rather than having a function called
+// mostly used for
+
 // function with an expression body
 fun labelMultiply(operant1: Int, operant2: Int, label: String = "The answer is:") = // return type is inferred
     "$label ${operant1 * operant2}"
