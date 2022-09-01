@@ -13,6 +13,14 @@ fun main() {
     val manyEmployees = arrayOf(emp1, emp2, emp3)
     // printEmployees(manyEmployees) // type mismatch
     printEmployees(*manyEmployees) // use spread operator to unpack an array
+
+    val s = "this is all in lowercase"
+    println(s.upperFirstAndLast())
+}
+
+fun String.upperFirstAndLast(): String {
+    val upperFirst = this.substring(0, 1).toUpperCase() + this.substring(1) // can remove this
+    return upperFirst.substring(0, upperFirst.length-1) + upperFirst.substring(upperFirst.length -1, upperFirst.length).toUpperCase()
 }
 
 // function with a block body
