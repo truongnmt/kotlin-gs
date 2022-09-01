@@ -5,11 +5,23 @@ fun main() {
     println(emp.firstName)
 
     val emp2 = Employee("Joe")
+    emp2.fullTime = false // call set()
     println(emp2.firstName)
-    println(emp2.fullTime)
+    println(emp2.fullTime) // call get()
 }
 
-class Employee (val firstName: String, val fullTime: Boolean = true)
+class Employee (val firstName: String, fullTime: Boolean = true) {
+
+    var fullTime = fullTime
+    get() {
+        println("Running the custom get")
+        return field
+    }
+    set(value) {
+        println("Running the custom set")
+        field = value
+    }
+}
 
 class Demo {
     val dummy: String
