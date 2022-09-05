@@ -41,4 +41,9 @@ class SomethingElse: Something {
     constructor(someOtherParam: String): super(someOtherParam)
 }
 
+// data class can't be open, abstract or inner class
+data class DataClass(val number: Int) {
+
+}
+
 
