@@ -2,6 +2,17 @@ package main
 
 
 fun main() {
+    val setInts = setOf(10, 15, 19, 5, 3, -22)
+    // set can't contains duplicate element
+    // setOf is immutable
+    // plus return a new set
+    println(setInts.plus(20)) // [10, 15, 19, 5, 3, -22, 20]
+    println(setInts.plus(10)) // [10, 15, 19, 5, 3, -22, 20]
+    println(setInts.minus(19)) // [10, 15, 5, 3, -22]
+    println(setInts.minus(100)) // [10, 15, 19, 5, 3, -22]
+    println(setInts.average()) // 5.0
+    println(setInts.drop(3)) // drop first 3 el from the set // [5, 3, -22]
+
     val immutableMap = mapOf<Int, Car>(1 to Car("green", "Toyota", 2015),
         2 to Car("red", "Ford", 2016),
         3 to Car("silver", "Honda", 2013),
